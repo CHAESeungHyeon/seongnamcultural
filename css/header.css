@@ -1,0 +1,181 @@
+/* ============ HEADER ============ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fdfdfd;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  align-items: flex-end;
+  height: 66px;
+  padding-bottom: 10px;
+}
+
+/* 로고 */
+.header-logo {
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-right: 60px;
+  padding-top: 8px;
+}
+
+.header-logo img {
+  height: 50px;
+}
+
+/* 내비게이션 */
+.header-nav {
+  flex-shrink: 0;
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-nav ul li a {
+  font-size: 22px;
+  color: #333;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.header-nav ul li a:hover {
+  color: #000;
+}
+
+/* 로그인/회원가입 */
+.header-auth {
+  margin-left: 83px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  flex-shrink: 0;
+}
+
+.header-auth a {
+  font-size: 16px;
+  color: #666;
+  font-weight: 300;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.header-auth a:hover {
+  color: #333;
+}
+
+.header-auth .divider {
+  color: #666;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* 햄버거 버튼 */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  margin-left: auto;
+  cursor: pointer;
+  align-self: center;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #333;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============ 반응형 ============ */
+@media (max-width: 1100px) {
+  .header-auth {
+    margin-left: 30px;
+  }
+
+  .header-nav ul {
+    gap: 14px;
+  }
+
+  .header-nav ul li a {
+    font-size: 18px;
+  }
+
+  .header-logo {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-auth {
+    display: none;
+  }
+
+  .header-nav ul li a {
+    font-size: 16px;
+  }
+
+  .header-nav ul {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    background: #fdfdfd;
+    padding: 20px 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    transform: translateY(-110%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .header-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .header-nav ul li a {
+    font-size: 18px;
+  }
+
+  .header-logo {
+    margin-right: auto;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

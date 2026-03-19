@@ -1,0 +1,796 @@
+/* ============ MAIN ============ */
+main {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* ============ 검색 ============ */
+#search {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 1200px;
+  max-width: 100%;
+  height: 54px;
+  border-radius: 100px;
+  background: #fefefe;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.search-bar input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background: transparent;
+  margin-left: 30px;
+  font-size: 20px;
+  color: #333;
+  outline: none;
+  font-family: inherit;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+  font-size: 20px;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 46px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.search-btn img {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+
+/* ============ 이달의 문화생활 배너 ============ */
+#main-banner {
+  margin-top: 30px;
+  position: relative;
+}
+
+#main-banner .container {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 슬라이더 트랙 */
+.swiper-track {
+  position: relative;
+  height: 650px;
+  width: 100%;
+  overflow: hidden;
+  perspective: 1300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* 슬라이드 */
+.swipe-slide {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 350px;
+  margin-left: -175px;
+  transition:
+    transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.55s ease,
+    filter 0.55s ease;
+  cursor: pointer;
+  transform-origin: center center;
+  text-align: center;
+}
+
+.swipe-slide img {
+  width: 100%;
+  height: 503px;
+  object-fit: cover;
+  border-radius: 23px;
+  box-shadow: 10px 9px 4px rgba(0, 0, 0, 0.25);
+  display: block;
+  transition: filter 0.55s ease;
+}
+
+/* 슬라이드 텍스트 (이미지 아래) */
+.slide-text {
+  display: block;
+  width: 100%;
+  padding-top: 18px;
+  transition: opacity 0.55s ease;
+}
+
+.slide-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.slide-date,
+.slide-location {
+  font-size: 18px;
+  font-weight: 300;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+/* 슬라이더 하단 (컨트롤) */
+.swiper-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+/* 컨트롤 버튼 */
+.swiper-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.swiper-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.swiper-btn:hover {
+  background: #f0f0f0;
+  border-color: #aaa;
+}
+
+.swiper-btn img {
+  height: 14px;
+  width: auto;
+  display: block;
+}
+
+.swiper-btn.play-btn {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ============ 사이드 내비게이션 ============ */
+.side-nav {
+  position: fixed;
+  right: 20px;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+  transition: background 0.2s;
+}
+
+.side-nav-item:last-child {
+  border-bottom: none;
+}
+
+.side-nav-item:hover {
+  background: #f7f7f7;
+}
+
+.side-nav-item img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.side-nav-item span {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* ============ 공지사항 ============ */
+#notice {
+  margin-top: 90px;
+}
+
+.notice-title {
+  font-size: 30px !important;
+  margin-bottom: 40px;
+}
+
+/* 공지 배너 슬라이더 */
+.notice-banner-wrap {
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.notice-slides {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.notice-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.notice-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 점 버튼 */
+.notice-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 37px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: background 0.3s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.dot.active {
+  background: #333;
+}
+
+/* 공지 아이템 */
+.notice-items {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.notice-item {
+  flex: 1;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 22px 26px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 110px;
+  transition: border-color 0.2s;
+}
+
+.notice-item:hover {
+  border-color: #999;
+}
+
+.notice-item-title {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.notice-item-date {
+  font-size: 16px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.notice-item-date img {
+  height: 24px;
+  width: auto;
+  display: inline-block;
+}
+
+/* 더보기 */
+.more-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  font-size: 15px;
+  color: #333;
+  margin-top: 8px;
+  padding: 6px 0;
+  transition: color 0.2s;
+}
+
+.more-link:hover {
+  color: #000;
+}
+
+.more-link .fa-arrow-right {
+  font-size: 13px;
+}
+
+/* ============ 공통 소제목 (30px) ============ */
+.sub-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* ============ 성남문화재단 소식 ============ */
+#news {
+  margin-top: 50px;
+}
+
+#news .sub-title {
+  margin-bottom: 56px;
+}
+
+.news-items {
+  display: flex;
+  align-items: stretch;
+}
+
+.news-item {
+  flex: 1;
+  padding: 0 70px;
+  font-size: 18px;
+  color: #4d4d4d;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.news-item:first-child {
+  padding-left: 0;
+}
+
+.news-item:last-child {
+  padding-right: 0;
+}
+
+.news-divider {
+  width: 1px;
+  flex-shrink: 0;
+  background: #bbb;
+}
+
+.news-tag {
+  font-weight: bold;
+}
+
+.news-date {
+  font-size: 15px;
+  color: #999;
+  margin-top: auto;
+}
+
+/* ============ 뉴스레터 ============ */
+#newsletter {
+  margin-top: 50px;
+}
+
+#newsletter .sub-title {
+  margin-bottom: 24px;
+}
+
+.newsletter-box {
+  width: 100%;
+  height: 414px;
+  background: #eee;
+  border: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-box > img {
+  height: 314px;
+  width: auto;
+  object-fit: cover;
+  margin-left: 50px;
+  flex-shrink: 0;
+}
+
+.newsletter-content {
+  margin-left: 60px;
+  padding-right: 68px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.heart-btn {
+  font-size: 22px;
+  margin-bottom: 14px;
+  width: fit-content;
+  transition: transform 0.15s ease;
+}
+
+.heart-btn:active {
+  transform: scale(0.85);
+}
+
+.heart-btn i {
+  transition: color 0.2s ease;
+}
+
+.heart-btn.liked i {
+  font-weight: 900;
+  color: #e03232;
+}
+
+.newsletter-title {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+
+.newsletter-hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0 0 14px;
+}
+
+.newsletter-body {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ============ 운영공간 ============ */
+#venues {
+  margin-top: 100px;
+}
+
+#venues .sub-title {
+  margin-bottom: 26px;
+}
+
+.venues-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.venues-wrap {
+  overflow: hidden;
+}
+
+.venues-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease;
+}
+
+.venue-item {
+  flex: 0 0 calc((100% - 60px) / 4);
+  min-width: 0;
+}
+
+.venue-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.venue-name {
+  font-size: 20px;
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+
+.venue-hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 0;
+}
+
+/* ============ 온라인신청 ============ */
+#apply {
+  margin-top: 100px;
+}
+
+#apply .sub-title {
+  margin-bottom: 36px;
+}
+
+.apply-scroll-wrap {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 25px;
+}
+
+.apply-scroll-wrap::-webkit-scrollbar {
+  height: 6px;
+}
+
+.apply-scroll-wrap::-webkit-scrollbar-track {
+  background: #e8e8e8;
+  border-radius: 3px;
+}
+
+.apply-scroll-wrap::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 3px;
+}
+
+.apply-items {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.apply-item {
+  flex: 0 0 calc(25% - 15px);
+  height: 222px;
+  border: 1px solid #333;
+  background: #fff;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.apply-tag {
+  width: 61px;
+  height: 28px;
+  border: 1px solid #333;
+  box-shadow: 3px 2px 0 #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.apply-tag--receive {
+  background: #99e1dd;
+}
+
+.apply-tag--support {
+  background: #fff;
+}
+
+.apply-title {
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.apply-period {
+  font-size: 12px;
+  color: #444;
+  margin-top: 20px;
+}
+
+.apply-period-label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* ============ 반응형 ============ */
+@media (max-width: 768px) {
+  .swiper-track{
+    height: 470px;
+  }
+  .slide-title{
+    font-size: 20px;
+  }
+  .slide-date{
+    font-size: 14px;
+  }
+  .slide-location{
+    font-size: 12px;
+  }
+  .section-title {
+    font-size: 26px;
+  }
+
+  #notice{
+    margin-top: 40px;
+  }
+  .notice-title {
+    font-size: 22px !important;
+  }
+
+  .notice-items {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .swipe-slide {
+    width: 280px;
+    margin-left: -140px;
+  }
+
+  .swipe-slide img {
+    height: 400px;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .search-bar input,
+  .search-bar input::placeholder {
+    font-size: 15px;
+  }
+
+  /* 공지사항 배너 이미지 축소 */
+  .notice-banner-wrap {
+    height: auto;
+  }
+
+  .notice-slide img {
+    height: 250px !important;
+    object-fit: fill;
+  }
+
+  /* 성남문화재단 소식 */
+  .sub-title {
+    font-size: 22px;
+  }
+
+  .news-items {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .news-item {
+    padding: 20px 0;
+  }
+
+  .news-item:first-child {
+    padding-top: 0;
+  }
+
+  .news-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .news-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  /* 뉴스레터 */
+  .newsletter-box {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0;
+    gap: 24px;
+  }
+
+  .newsletter-box > img {
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+    object-fit: cover;
+  }
+
+  .newsletter-content {
+    margin-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  /* 운영공간 */
+  #venues {
+    margin-top: 60px;
+  }
+
+  .venue-item {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+
+  /* 온라인신청 */
+  #apply {
+    margin-top: 60px;
+  }
+
+  .apply-item {
+    flex: 0 0 calc(50% - 10px);
+    height: auto;
+    min-height: 200px;
+  }
+}
+
+/* ============ 모바일 (390px) ============ */
+@media (max-width: 480px) {
+  .notice-banner-wrap {
+    height: auto;
+  }
+
+  .notice-slide {
+    min-width: 100%;
+  }
+
+  .notice-slide img {
+    width: 100% !important;
+    height: 140px !important;
+    object-fit: fill !important;
+  }
+
+  .swipe-slide {
+    width: 240px;
+    margin-left: -120px;
+  }
+
+  .swipe-slide img {
+    height: 340px;
+  }
+
+  .newsletter-box {
+    height: auto;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .newsletter-box > img {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .newsletter-content {
+    margin-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  /* 운영공간 */
+  .venue-item {
+    flex: 0 0 100%;
+  }
+
+  /* 온라인신청 */
+  .apply-item {
+    flex: 0 0 calc(100% - 0px);
+    min-height: 180px;
+  }
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>성남문화재단</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/1cd9cbfb2d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="img/symbol/logo-header.png" alt="성남문화재단">
+      </a>
+      <nav class="header-nav" id="headerNav">
+        <ul>
+          <li><a href="#">공연/전시</a></li>
+          <li><a href="#">문화예술교육</a></li>
+          <li><a href="#">지원사업</a></li>
+          <li><a href="#">운영시설</a></li>
+          <li><a href="#">소식알림</a></li>
+          <li><a href="#">성남문화재단</a></li>
+        </ul>
+      </nav>
+      <div class="header-auth">
+        <a href="#">로그인</a>
+        <span class="divider">|</span>
+        <a href="#">회원가입</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="side-nav" id="sideNav">
+    <a href="#" class="side-nav-item">
+      <img src="img/symbol/keybord.png" alt="아카데미 교육신청">
+      <span>아카데미<br>교육신청</span>
+    </a>
+    <a href="#" class="side-nav-item">
+      <img src="img/symbol/flatfrom.png" alt="예술인지원 플랫폼">
+      <span>예술인지원<br>플랫폼</span>
+    </a>
+  </aside>
+
+  <main>
+
+    <!-- 검색 -->
+    <section id="search">
+      <div class="search-bar">
+        <input type="text" placeholder="어떤 공연/전시을(를) 검색하시겠어요?">
+        <button class="search-btn" aria-label="검색">
+          <img src="img/symbol/search.png" alt="검색">
+        </button>
+      </div>
+    </section>
+
+    <!-- 이달의 문화생활 -->
+    <section id="main-banner">
+      <div class="container">
+        <h2 class="section-title">이달의 문화생활</h2>
+      </div>
+      <div class="swiper-track" id="swiperTrack">
+        <!-- JS로 생성 -->
+      </div>
+      <div class="container">
+        <div class="swiper-bottom">
+          <div class="swiper-controls">
+            <button class="swiper-btn" id="prevBtn" aria-label="이전 슬라이드">
+              <img src="img/symbol/left.png" alt="이전">
+            </button>
+            <button class="swiper-btn play-btn" id="playPauseBtn" aria-label="재생 일시정지">
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <button class="swiper-btn" id="nextBtn" aria-label="다음 슬라이드">
+              <img src="img/symbol/right.png" alt="다음">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 공지사항 -->
+    <section id="notice">
+      <div class="container">
+        <h2 class="section-title notice-title">공지사항</h2>
+        <div class="notice-banner-wrap">
+          <div class="notice-slides" id="noticeSlides">
+            <div class="notice-slide">
+              <a href="#"><img src="img/index/banner.png" alt="2026 성남예술인 예술창작활동 지원사업"></a>
+            </div>
+            <div class="notice-slide">
+              <a href="#"><img src="img/index/banner.png" alt="공지사항 배너 2"></a>
+            </div>
+            <div class="notice-slide">
+              <a href="#"><img src="img/index/banner.png" alt="공지사항 배너 3"></a>
+            </div>
+          </div>
+        </div>
+        <div class="notice-dots" id="noticeDots">
+          <button class="dot active" data-index="0" aria-label="배너 1"></button>
+          <button class="dot" data-index="1" aria-label="배너 2"></button>
+          <button class="dot" data-index="2" aria-label="배너 3"></button>
+        </div>
+        <div class="notice-items">
+          <a href="#" class="notice-item">
+            <p class="notice-item-title">2026년 성남문화재단 온라인 홍보 콘텐츠<br>제작 입찰공고 (협상에 의한 계약)</p>
+            <p class="notice-item-date">
+              <img src="img/symbol/Calender-gray.png" alt="">
+              2026-02-05
+            </p>
+          </a>
+          <a href="#" class="notice-item">
+            <p class="notice-item-title">성남시 공연장, 전시장 대관 공간 정보 알림</p>
+            <p class="notice-item-date">
+              <img src="img/symbol/Calender-gray.png" alt="">
+              2026-01-27
+            </p>
+          </a>
+        </div>
+        <a href="#" class="more-link">
+          더보기 <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 성남문화재단 소식 -->
+    <section id="news">
+      <div class="container">
+        <h2 class="sub-title">성남문화재단 소식</h2>
+        <div class="news-items">
+          <div class="news-item">
+            <p class="news-tag">공연</p>
+            <p class="news-text">BBC 심포니오케스트라 성남 내한공연, 3월 28일 성남아트센터 콘서트홀 무대 오른다</p>
+            <p class="news-date">2026.03.28</p>
+          </div>
+          <div class="news-divider"></div>
+          <div class="news-item">
+            <p class="news-tag">전시</p>
+            <p class="news-text">성남브라운미술관 〈HETEROTOPIA〉 개막, 인화기 된 회화 6월까지 선보여</p>
+            <p class="news-date">2026.02.27</p>
+          </div>
+          <div class="news-divider"></div>
+          <div class="news-item">
+            <p class="news-tag">프로그램</p>
+            <p class="news-text">2026 아트리움 클래식 시리즈 개막, K-POP으로 만나는 클래식 4월 11일 개최</p>
+            <p class="news-date">2026.04.11</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 뉴스레터 -->
+    <section id="newsletter">
+      <div class="container">
+        <h2 class="sub-title">Newsletter</h2>
+        <div class="newsletter-box">
+          <img src="img/index/newsletter.png" alt="뉴스레터 이미지">
+          <div class="newsletter-content">
+            <button class="heart-btn" id="heartBtn" aria-label="좋아요">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <p class="newsletter-title">성남문화재단 송년 공연 모음: 겨울, 음악으로 채워지는 시간</p>
+            <hr class="newsletter-hr">
+            <p class="newsletter-body">차분히 한 해를 되돌아보는 겨울, 지나간 시간의 아쉬움과 허전함을 아름다운 음악과 낭만적인 무대로 다시 따뜻하게 채워 보는 건 어떨까. 올겨울에는 장르와 세대를 아우르는 다양한 공연들이 우리의 연말을 풍성하게 물들이며 새로운 감동의 순간을 선사한다. 2025년의 끝맺음을 함께할 예술적 순간들을 살펴본다. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 운영공간 -->
+    <section id="venues">
+      <div class="container">
+        <h2 class="sub-title">운영공간</h2>
+        <div class="venues-controls">
+          <button class="swiper-btn" id="venuePrevBtn" aria-label="이전">
+            <img src="img/symbol/left.png" alt="이전">
+          </button>
+          <button class="swiper-btn" id="venueNextBtn" aria-label="다음">
+            <img src="img/symbol/right.png" alt="다음">
+          </button>
+        </div>
+        <div class="venues-wrap" id="venuesWrap">
+          <div class="venues-track" id="venuesTrack">
+            <div class="venue-item">
+              <img src="img/index/place (1).png" alt="성남아트센터 앙상블시어터">
+              <p class="venue-name">성남아트센터 앙상블시어터</p>
+              <hr class="venue-hr">
+            </div>
+            <div class="venue-item">
+              <img src="img/index/place (2).png" alt="성남아트센터 오페라하우스">
+              <p class="venue-name">성남아트센터 오페라하우스</p>
+              <hr class="venue-hr">
+            </div>
+            <div class="venue-item">
+              <img src="img/index/place (3).png" alt="성남아트센터 콘서트홀">
+              <p class="venue-name">성남아트센터 콘서트홀</p>
+              <hr class="venue-hr">
+            </div>
+            <div class="venue-item">
+              <img src="img/index/place (4).png" alt="성남아트센터 갤러리808">
+              <p class="venue-name">성남아트센터 갤러리808</p>
+              <hr class="venue-hr">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 온라인신청 -->
+    <section id="apply">
+      <div class="container">
+        <h2 class="sub-title">온라인신청</h2>
+        <div class="apply-scroll-wrap">
+          <div class="apply-items">
+            <a href="#" class="apply-item">
+              <div class="apply-tags">
+                <span class="apply-tag apply-tag--receive">접수중</span>
+                <span class="apply-tag apply-tag--support">지원사업</span>
+              </div>
+              <p class="apply-title">성남예술인 교류·협력 지원사업</p>
+              <p class="apply-period"><span class="apply-period-label">신청기간</span> 2026.02.02 → 2026.02.12</p>
+            </a>
+            <a href="#" class="apply-item">
+              <div class="apply-tags">
+                <span class="apply-tag apply-tag--receive">접수중</span>
+                <span class="apply-tag apply-tag--support">지원사업</span>
+              </div>
+              <p class="apply-title">청년예술활동 지원사업 지원사업</p>
+              <p class="apply-period"><span class="apply-period-label">신청기간</span> 2026.02.03 → 2026.02.12</p>
+            </a>
+            <a href="#" class="apply-item">
+              <div class="apply-tags">
+                <span class="apply-tag apply-tag--receive">접수중</span>
+                <span class="apply-tag apply-tag--support">지원사업</span>
+              </div>
+              <p class="apply-title">예비예술인 지원 프로젝트 〈아트브릿지〉</p>
+              <p class="apply-period"><span class="apply-period-label">신청기간</span> 2026.02.02 → 2026.02.12</p>
+            </a>
+            <a href="#" class="apply-item">
+              <div class="apply-tags">
+                <span class="apply-tag apply-tag--receive">접수중</span>
+                <span class="apply-tag apply-tag--support">지원사업</span>
+              </div>
+              <p class="apply-title">성남예술인 예술창작활동 지원사업, 시각, 다원(시각)</p>
+              <p class="apply-period"><span class="apply-period-label">신청기간</span> 2026.02.02 → 2026.02.12</p>
+            </a>
+            <a href="#" class="apply-item">
+              <div class="apply-tags">
+                <span class="apply-tag apply-tag--receive">접수중</span>
+                <span class="apply-tag apply-tag--support">지원사업</span>
+              </div>
+              <p class="apply-title">성남예술인 교류·협력 지원사업</p>
+              <p class="apply-period"><span class="apply-period-label">신청기간</span> 2026.02.02 → 2026.02.12</p>
+            </a>
+            <a href="#" class="apply-item">
+              <div class="apply-tags">
+                <span class="apply-tag apply-tag--receive">접수중</span>
+                <span class="apply-tag apply-tag--support">지원사업</span>
+              </div>
+              <p class="apply-title">청년예술활동 지원사업 지원사업</p>
+              <p class="apply-period"><span class="apply-period-label">신청기간</span> 2026.02.03 → 2026.02.12</p>
+            </a>
+            <a href="#" class="apply-item">
+              <div class="apply-tags">
+                <span class="apply-tag apply-tag--receive">접수중</span>
+                <span class="apply-tag apply-tag--support">지원사업</span>
+              </div>
+              <p class="apply-title">예비예술인 지원 프로젝트 〈아트브릿지〉</p>
+              <p class="apply-period"><span class="apply-period-label">신청기간</span> 2026.02.02 → 2026.02.12</p>
+            </a>
+            <a href="#" class="apply-item">
+              <div class="apply-tags">
+                <span class="apply-tag apply-tag--receive">접수중</span>
+                <span class="apply-tag apply-tag--support">지원사업</span>
+              </div>
+              <p class="apply-title">성남예술인 예술창작활동 지원사업, 시각, 다원(시각)</p>
+              <p class="apply-period"><span class="apply-period-label">신청기간</span> 2026.02.02 → 2026.02.12</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- 상단 링크 바 -->
+    <div class="footer-top">
+      <div class="container">
+        <a href="#" class="footer-top-link">개인정보처리방침</a>
+        <a href="#" class="footer-top-link">저작권보호정책</a>
+        <a href="#" class="footer-top-link">영상정보처리기기운영 / 관리방침</a>
+        <a href="#" class="footer-top-link">이메일무단수집거부</a>
+        <p class="footer-top-contact">예매문의 <span>1544-8117</span></p>
+        <p class="footer-top-contact">일반문의 <span>031-783-8000</span></p>
+        <p class="footer-top-contact">팩스번호 <span>031-783-8160</span></p>
+      </div>
+    </div>
+    <!-- 하단 본문 -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+        <a href="index.html" class="footer-logo">
+          <img src="img/symbol/logo-footer.png" alt="성남문화재단">
+        </a>
+        <div class="footer-info">
+          <p class="footer-address">(13514) 경기도 성남시 분당구 성남대로 808 (야탑동)</p>
+          <div class="footer-meta">
+            <span>재단법인 성남문화재단</span>
+            <span class="footer-meta-divider">|</span>
+            <span>사업자등록번호 129-82-07974</span>
+            <span class="footer-meta-divider">|</span>
+            <span>통신판매업신고 제2006-경기성남-674호</span>
+            <span class="footer-meta-divider">|</span>
+            <button class="footer-biz-btn">사업자정보확인</button>
+          </div>
+          <p class="footer-copy">Copyright© Seongnam Cultural Foundation All Rights Reserved.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
